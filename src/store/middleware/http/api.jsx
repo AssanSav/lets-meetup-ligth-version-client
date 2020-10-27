@@ -1,7 +1,8 @@
 import axios from "axios"
 import * as actions from './apiActionCreator';
 
-const BASE_URL = process.env.REACT_APP_API_URL
+const BASE_URL = "https://chatti-room.herokuapp.com/api/v1"
+// process.env.REACT_APP_API_URL
 
 const api = ({ dispatch }) => next => async action => {
 
