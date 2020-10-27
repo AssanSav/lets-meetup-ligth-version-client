@@ -33,6 +33,7 @@ const ChatRoom = (props) => {
     e.preventDefault();
     dispatch(createMessage({ content: content, match_id: match_id }))
     setContent("")
+    window.location = `/new-message/${id}`
   }
 
   const received_messages = messages.filter((message) => {
