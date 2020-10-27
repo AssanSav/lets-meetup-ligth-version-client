@@ -11,6 +11,8 @@ class Form extends Component {
     errors: {}
   };
 
+  buttonRef = React.createRef()
+
   validate = () => {
     const options = { abortEarly: false };
     const { error } = Joi.validate(this.state.data, this.schema, options);
@@ -30,10 +32,15 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const errors = this.validate();
-    this.setState({ errors: errors || {} });
-    if (errors) return;
-    this.doSubmit();
+    if (this.buttonRef.current.innerHTML === "Edit") {
+      this.doSubmit();
+    } else {
+      const errors = this.validate();
+      this.setState({ errors: errors || {} });
+      if (errors) return;
+
+      this.doSubmit();
+    }
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -49,15 +56,15 @@ class Form extends Component {
   };
 
   handleCkecked = (e) => {
-    let data = {...this.state.data}
+    let data = this.state.data 
     let interestsChecked = data[e.target.name]
     let interestValue = e.target.value;
-    if (e.target.checked === true) {
+    if (e.target.checked === true && interestsChecked) {
       interestsChecked.push(interestValue);
       this.setState({
         interest_ids: interestsChecked,
       });
-    } else {
+    } else if (interestsChecked) {
       let interestIndex = interestsChecked.indexOf(interestValue);
       interestsChecked.splice(interestIndex, 1);
 
@@ -69,7 +76,7 @@ class Form extends Component {
 
   renderButton(label) {
     return (
-      <button style={{ marginTop: "10px" }} disabled={this.validate()} className="btn btn-primary">
+      <button ref={this.buttonRef} disabled={this.validate()} id="" className="button">
         {label}
       </button>
     );
