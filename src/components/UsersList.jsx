@@ -13,7 +13,7 @@ class UsersList extends Component {
       users: [],
       genders: [],
       selectedGender: "",
-      pageSize: 4,
+      pageSize: 6,
       currentPage: 1,
     };
   }
@@ -28,6 +28,10 @@ class UsersList extends Component {
     this.setState({
       currentPage: page,
     });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"})
   };
 
   handleOnGenderSelect = (gender) => {

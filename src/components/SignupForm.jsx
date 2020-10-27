@@ -54,7 +54,7 @@ class SignupForm extends Form {
 
         this.setState({ errors })
       } else {
-        window.location = ("/users")
+        window.location = "/users"
       }
      
     } catch (ex) {

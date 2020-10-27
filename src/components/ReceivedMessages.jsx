@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReceivedMessages } from "../store/messagesReducer";
 import { deleteReceivedMessage } from "../store/messagesReducer";
-import { messagesTable } from '../common/table';
 import { Link } from "react-router-dom";
 
 const ReceivedMessages = () => {

@@ -11,12 +11,12 @@ const slice = createSlice({
     interests: [],
     matches: [],
     status: false,
-    loading: false,
+    loading: true,
   },
 
   reducers: {
     session: (users, action) => {
-      users.loading = true
+      users.loading = false
       users.status = action.payload.loggedIn
       users.user = action.payload.user.data.attributes;
       users.all = action.payload.users

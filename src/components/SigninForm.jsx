@@ -35,7 +35,7 @@ class LoginForm extends Form {
 
         this.setState({ errors })
       } else {
-        this.props.history.push("/users")
+        window.location = "/users"
       }
       
     } catch (ex) {
@@ -80,7 +80,7 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
 
 
-{/* <div className="form">
+/*/* <div className="form">
   <div className="errors">
     {
       email
@@ -110,4 +110,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
       {this.renderButton("Signin")}
     </div>
   </form>
-</div> */}
+</div> */

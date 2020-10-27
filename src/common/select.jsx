@@ -5,7 +5,7 @@ const Select = ({ name, label, options, error, ...rest }) => {
     <>
       <div className="form-group">
         <select name={name} id={name} {...rest} className="form-control">
-          <option value="" selected hidden>{label}</option>
+          <option value="" defaultValue hidden>{label}</option>
           {options.map((option, index) => (
             <option key={index} value={option} >
               {option}

@@ -28,7 +28,7 @@ const Profile = (props ) => {
 
   useEffect(() => {
     dispatch(fetchProfile(props.match.params.id))
-  }, [dispatch])
+  }, [dispatch, props.match.params.id])
 
 
   if (!status) {

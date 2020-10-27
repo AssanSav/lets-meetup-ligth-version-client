@@ -14,7 +14,7 @@ const Matches = () => {
   return (
     <>
       {matches.map((user) => (
-        <div className="profile" style={{ marginTop: "50px" }} >
+        <div className="profile" key={user.id} style={{ marginTop: "50px" }} >
           {card(user)}
         </div>
       )

@@ -1,7 +1,9 @@
-import React from "react";
 import { card } from '../common/card';
 
+
 const UserCard = ({ user }) => {
+
+
   return (
     card(user)
   );

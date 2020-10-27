@@ -1,28 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavLink } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
-import { logoutUser } from "../store/usersReducer"
+import {  useSelector } from 'react-redux';
 
-const NavBar = () => {
-  const dispatch = useDispatch()
+const NavBar = () => { 
   const user = useSelector(state => state.users.user)
   const status = useSelector(state => state.users.status)
-
-
-  const handleLogout = () => {
-    dispatch(logoutUser(user.id))
-  }
-
 
   return (
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         {!status ?
           <>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <li className="navbar-brand" >
                 <h1 style={{ color: "red" }}>Chatty</h1>
               </li>
@@ -59,10 +51,10 @@ const NavBar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/matches">My Matches</NavLink>
+                  <NavLink className="nav-link" to="/matches">Matches</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/signin" onClick={() => handleLogout()}>Log Out</NavLink>
+                  <NavLink className="nav-link" to="/logout" >Log Out</NavLink>
                 </li>
                 <li>
                   <NavLink className="navbar-brand" to={`/my-profile/${user.id}`}>
