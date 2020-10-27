@@ -25,7 +25,7 @@ export const card = (user) => {
         {user.orientation}
       </p>
       <Link to={`/profile/${user.id}`}>
-        <button className="btn btn-success">View Profile</button>
+        <button className="btn btn-success m-2">View Profile</button>
       </Link>
     </div>
   )

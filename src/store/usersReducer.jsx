@@ -16,7 +16,7 @@ const slice = createSlice({
 
   reducers: {
     session: (users, action) => {
-      users.loading = false
+      users.loading = true
       users.status = action.payload.loggedIn
       users.user = action.payload.user.data.attributes;
       users.all = action.payload.users

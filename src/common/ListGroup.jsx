@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+// import {} from "react-redux"
 
 const ListGroup = ({ genders, OnGenderSelect, selectedGender }) => {
+  const [toggleHide, setToggleHide] = useState(false)
+  const hideRef = useRef()
+  const showRef = useRef()
+
+  const hide = (e) => {
+    if(toggleHide) {
+      setToggleHide(false)
+      showRef.current.innerHTML = "Hide"
+    }else{ 
+      setToggleHide(true)
+      showRef.current.innerHTML = "Show"
+    }
+  }
+
   return (
-    <ul className="list-group col-3" style={{ marginLeft: "120px", overflowWrap: "break-word" }} >
+    <>
+    { !toggleHide && <ul className="list-group col-3" ref={hideRef} style={{ marginLeft: "120px", overflowWrap: "break-word" }} >
       <h2 style={{ color: "blue" }}>
         <strong>Let's Chat!!!</strong>
       </h2>
@@ -21,7 +37,9 @@ const ListGroup = ({ genders, OnGenderSelect, selectedGender }) => {
           {gender}
         </li>
       ))}
-    </ul>
+    </ul>}
+        <button ref={showRef} style={{marginLeft: "140px", marginTop:"10px"}} className="btn btn-primary List" onClick={hide}>Hide</button>
+    </>
   );
 };
 

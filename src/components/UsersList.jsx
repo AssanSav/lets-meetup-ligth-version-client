@@ -20,7 +20,7 @@ class UsersList extends Component {
 
   componentDidMount() {
     this.setState({
-      genders: ["All Genders", "Male", "Female", "Transgender"],
+      genders: ["All Genders",  "Transgender", "Female","Male"],
     });
   }
 
@@ -30,7 +30,7 @@ class UsersList extends Component {
     });
 
     window.scrollTo({
-      top: 0,
+      top: 2,
       behavior: "smooth"})
   };
 

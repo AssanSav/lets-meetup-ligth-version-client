@@ -34,7 +34,6 @@ const Routes = () => {
         <Route path="/not-found" component={NotFound} />
         <Redirect from="/" exact to="/signin" />
         <Redirect to="/not-found" />
-        
       </Switch>
     </>
   );

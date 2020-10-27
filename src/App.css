@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px) {
+ body {
+   width: fit-content;
+  background-color: red;
+}
+}
 
 /* Signup and Login Forms */
 .form {
@@ -22,6 +28,10 @@
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 3px;
+}
+
+.interests_list{
+  /* overflow: hidden; */
 }
 
 .interests {
@@ -79,6 +89,7 @@
 
 /* Show page  */
 .user-profile{
+  display: inline-block;
   width: 100%;
   margin: 100px auto 120px;
   background-color: #fff;
@@ -89,11 +100,10 @@
 }
 
 .avatar_flip {
+  text-align: center;
   margin-top: 40px;
   border-radius: 50px;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
   position: relative;
   margin: auto;
   top: -60px;
@@ -106,8 +116,8 @@
 .profile_pic {
   text-align: center;
   font-family: 'Questrial', sans-serif;
-  height: 80%;
-  width: 80%;
+  /* height: 250px; */
+  width: 450px;
 }
 
 #root > main  > div > p {
