@@ -1,0 +1,56 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+  height: 10vh;
+}
+
+header div.logo h1 {
+  color: #333;
+  font-size: 3rem;
+}
+
+header div.entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header div.entry div.signin,
+header div.entry div.signup {
+  border-radius: 5px;
+}
+
+header div.entry div.signin:hover,
+header div.entry div.signup:hover {
+  background-color: #333;
+  -webkit-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+}
+
+header div.entry div.signin a,
+header div.entry div.signup a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+header div.entry div.signin {
+  background-color: #00cf00;
+}
+
+header div.entry div.signup {
+  margin-left: 30px;
+  background-color: rgba(255, 193, 78, 0.911);
+}
+/*# sourceMappingURL=navbar.css.map */

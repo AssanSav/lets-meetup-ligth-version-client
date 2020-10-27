@@ -1,0 +1,131 @@
+div.form {
+  height: 90vh;
+  padding-top: 50px;
+}
+
+div.form div.errors {
+  text-align: center;
+  color: red;
+  padding: 10px;
+}
+
+div.form h1 {
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+}
+
+div.form form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.form form div.signin_email,
+div.form form div.signin_password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 60%;
+  height: 40px;
+  margin-top: 15px;
+  border: 1px solid #6b6b6ba8;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+div.form form div.signin_email div.email input,
+div.form form div.signin_email div.email_icon input,
+div.form form div.signin_email div.password input,
+div.form form div.signin_email div.password_icon input,
+div.form form div.signin_password div.email input,
+div.form form div.signin_password div.email_icon input,
+div.form form div.signin_password div.password input,
+div.form form div.signin_password div.password_icon input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-right: 270px;
+}
+
+div.form form div.signin_email div.email input::-webkit-input-placeholder,
+div.form form div.signin_email div.email_icon input::-webkit-input-placeholder,
+div.form form div.signin_email div.password input::-webkit-input-placeholder,
+div.form form div.signin_email div.password_icon input::-webkit-input-placeholder,
+div.form form div.signin_password div.email input::-webkit-input-placeholder,
+div.form form div.signin_password div.email_icon input::-webkit-input-placeholder,
+div.form form div.signin_password div.password input::-webkit-input-placeholder,
+div.form form div.signin_password div.password_icon input::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+div.form form div.signin_email div.email input:-ms-input-placeholder,
+div.form form div.signin_email div.email_icon input:-ms-input-placeholder,
+div.form form div.signin_email div.password input:-ms-input-placeholder,
+div.form form div.signin_email div.password_icon input:-ms-input-placeholder,
+div.form form div.signin_password div.email input:-ms-input-placeholder,
+div.form form div.signin_password div.email_icon input:-ms-input-placeholder,
+div.form form div.signin_password div.password input:-ms-input-placeholder,
+div.form form div.signin_password div.password_icon input:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+div.form form div.signin_email div.email input::-ms-input-placeholder,
+div.form form div.signin_email div.email_icon input::-ms-input-placeholder,
+div.form form div.signin_email div.password input::-ms-input-placeholder,
+div.form form div.signin_email div.password_icon input::-ms-input-placeholder,
+div.form form div.signin_password div.email input::-ms-input-placeholder,
+div.form form div.signin_password div.email_icon input::-ms-input-placeholder,
+div.form form div.signin_password div.password input::-ms-input-placeholder,
+div.form form div.signin_password div.password_icon input::-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+div.form form div.signin_email div.email input::placeholder,
+div.form form div.signin_email div.email_icon input::placeholder,
+div.form form div.signin_email div.password input::placeholder,
+div.form form div.signin_email div.password_icon input::placeholder,
+div.form form div.signin_password div.email input::placeholder,
+div.form form div.signin_password div.email_icon input::placeholder,
+div.form form div.signin_password div.password input::placeholder,
+div.form form div.signin_password div.password_icon input::placeholder {
+  color: #9b9b9b;
+}
+
+div.form form div.signin_email div.email_icon i,
+div.form form div.signin_email div.password_icon i,
+div.form form div.signin_password div.email_icon i,
+div.form form div.signin_password div.password_icon i {
+  font-size: 1.2rem;
+  color: #9b9b9b;
+}
+
+div.form form div.signin_email div.password_icon,
+div.form form div.signin_password div.password_icon {
+  cursor: pointer;
+}
+
+div.form form div.signin_button {
+  background-color: #00cf00;
+  width: 60%;
+  height: 45px;
+  margin: 15px auto 0 auto;
+  border-radius: 5px;
+}
+
+div.form form div.signin_button button {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+/*# sourceMappingURL=signinForm.css.map */

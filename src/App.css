@@ -1,38 +1,290 @@
-.App {
+
+/* Signup and Login Forms */
+.form {
   text-align: center;
+  max-width:500px;
+  margin:25px auto;
+  background:#fff;
+  border-radius:10px;
+  border: 2px solid;
+  padding:20px;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form input::placeholder {
+  color: rgb(155, 155, 155);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group {
+  display: block;
+  padding: 9px;
+  border:2px solid black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.interests {
+  display: block;
+  padding: 9px;
+  border: 2px solid green;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.interests span {
+  padding: 3px;
+}
+
+#root > main > div > form > button{
+  background-color: rgb(0, 207, 0);
+  width: 100%;
+  height: 45px;
+  margin: 10px auto 0 auto;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Users List */
+.profile {
+  display: inline-grid;
+  width: 250px;
+  margin: 10px;
+  background-color: whitesmoke;
+  padding: 5px;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.profile a:link {
+  text-decoration: none;
+}
+
+#avatar_img {
+  height: 240px;
+  width: 100%;
+  border-radius: 75px;
+}
+
+.image_align {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  vertical-align: bottom;
+}  
+
+/* Show page  */
+.user-profile{
+  width: 100%;
+  margin: 100px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+.avatar_flip {
+  margin-top: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+  box-shadow: 0 0 0 13px #f0f0f0;
+  -webkit-box-shadow: 0 0 0 5px #f0f0f0;
+  -moz-box-shadow: 0 0 0 13px #f0f0f0;
+  margin-bottom: -40px;
+}
+
+.profile_pic {
+  text-align: center;
+  font-family: 'Questrial', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#root > main  > div > p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  overflow-wrap: break-word;
+  max-width: 600px;
+  font-size: 18px;
+  margin: auto;
+  line-height: 1.2em;
+  border: 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #d5d2df;
+}
+
+ /* Table */
+table {
+  table-layout: fixed;
+  background-color: white;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td, th {
+  border: 0.01px solid;
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Chat room */
+.chatroom {
+  margin-left: 100px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 50%;
+  height: 100%;
+  border: 1px solid;
+  background-color: rgba(0,0,0, .7);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3);
+}
+
+.chatroom h3 {
+  font-family: 'Pacifico', cursive;
+  background-color: black;
+  color: #FFF;
+  margin: 0;
+  height: 40px;
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.chatroom .chats {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  margin-bottom: 100px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.chatroom .chats .chat {
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding: 5px 13px;
+  font-size: 14px;
+  border-radius: 10px;
+  list-style: none;
+  float: left;
+  clear: both;
+  margin: 10px 0;
+  width: 200px;
+  font-size: 15px;
+  text-overflow: "----"; 
+}
+
+.chatroom .chats .chat img {
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+}
+
+.chatroom .chats .chat.left{
+  background-color: greenyellow;
+}
+
+.chatroom .chats .chat.right {
+  float: right;
+  clear: both;
+}
+
+.chatroom .chats .chat a {
+  text-decoration: none;
+  color:#3498DB;
+}
+
+.chatroom .input {
+  height: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chatroom .input textarea[type="text"] {
+  outline: 0;
+  border: 2px solid #1EE494;
+  padding: 0 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box; 
+  margin-bottom: 70px; 
+}
+
+.chatroom .input [type="submit"] {
+  background: transparent;
+  border: 1px solid #1EE494;
+  height: 30px;
+  width: 70px;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Upload file */
+ input[type="file"] {
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-file-upload {
+  background: #ddd;
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color:blue;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  cursor: pointer;
+  line-height: normal;
+  padding: 8px 10px; 
 }
+
+.custom-file-upload:hover {
+  background-color: red;
+}
+ 
+

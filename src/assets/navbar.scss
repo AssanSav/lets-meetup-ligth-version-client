@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  height: 10vh;
+  div.logo {
+    h1 {
+      color: #333;
+      font-size: 3rem;
+    }
+  }
+  div.entry {
+    display: flex;
+
+    div.signin,
+    div.signup {
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #333;
+        transition: background-color .3s ease-in;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+    }
+    div.signin {
+      background-color: rgb(0, 207, 0);
+    }
+    div.signup {
+      margin-left: 30px;
+      background-color: rgba(255, 193, 78, 0.911);
+    }
+  }
+}
