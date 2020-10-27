@@ -38,8 +38,8 @@ class UsersList extends Component {
     const { genders, selectedGender, pageSize, currentPage } = this.state;
     const { users } = this.props;
 
-    if (!users){ return <div></div>};
-    
+    if (!users) { return <div></div> };
+
 
     const filteredByGender =
       selectedGender === "Male" || selectedGender === "Female" || selectedGender === "Transgender"
@@ -50,20 +50,17 @@ class UsersList extends Component {
 
     return (
       <>
-          <h2 style={{ color: "blue" }}>
-            <strong>Let's Chat!!!</strong>
-          </h2>
-          <ListGroup
-            genders={genders}
-            selectedGender={selectedGender}
-            OnGenderSelect={this.handleOnGenderSelect}
-          />
+        <ListGroup
+          genders={genders}
+          selectedGender={selectedGender}
+          OnGenderSelect={this.handleOnGenderSelect}
+        />
         <br />
         <br />
         {usersData.map((user) => (
-          <span key={user.id}>
+          <div className="profile" key={user.id}>
             <UserCard user={user} />
-          </span>
+          </div>
         ))}
         <Pagination
           usersCount={filteredByGender.length}
@@ -76,7 +73,7 @@ class UsersList extends Component {
   }
 }
 
-const mapStateToProps = ({ users}) => {
+const mapStateToProps = ({ users }) => {
   return {
     users: users.all,
   };

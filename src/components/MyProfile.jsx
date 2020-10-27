@@ -27,7 +27,7 @@ const MyProfile = ({history}) => {
 
   const removeUser = async () => {
     await dispatch(deleteUser(user))
-      history.push("/signin");
+      history.push("/signup");
   };
 
   const anchorTag = (

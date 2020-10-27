@@ -12,11 +12,14 @@ const Matches = () => {
   }, [dispatch])
 
   return (
-    <div className="container" style={{ marginTop: "50px" }}>
-      {matches.map((user) => {
-        return card(user)
-      })}
-    </div>
+    <>
+      {matches.map((user) => (
+        <div className="profile" style={{ marginTop: "50px" }} >
+          {card(user)}
+        </div>
+      )
+      )}
+    </>
   );
 
 }

@@ -62,7 +62,7 @@ const NavBar = () => {
                   <NavLink className="nav-link" to="/matches">My Matches</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/signin" onClick={() => handleLogout()}>Log Out</a>
+                  <NavLink className="nav-link" to="/signin" onClick={() => handleLogout()}>Log Out</NavLink>
                 </li>
                 <li>
                   <NavLink className="navbar-brand" to={`/my-profile/${user.id}`}>

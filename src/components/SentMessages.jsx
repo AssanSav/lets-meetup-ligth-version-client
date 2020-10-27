@@ -45,7 +45,7 @@ const SentMessages = () => {
                   </td>
                   <td id="link">
                     <Link to={`/new-message/${message.match_id}`}>
-                      <button className="btn btn-success">Send Again</button>
+                      <button className="btn btn-success">Read</button>
                     </Link>
                   </td>
                   <td id="last_link">
