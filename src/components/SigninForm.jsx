@@ -59,7 +59,7 @@ class LoginForm extends Form {
           {this.renderButton("Login")}
         </form>
         <br></br>
-        <NavLink to="/signup">Don't have an account? Signup</NavLink>
+        <NavLink to="/signup">Don't have an account? <strong style={{color: "red"}}>Signup</strong></NavLink>
       </div>
     );
   }
@@ -81,35 +81,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
 
-
-/*/* <div className="form">
-  <div className="errors">
-    {
-      email
-        ? email && <>{email}</>
-        : password && <>{password}</>
-    }
-  </div>
-  <h1>Login</h1>
-  <form onSubmit={this.handleSubmit}>
-    <div className="signin_email">
-      <div className="email">
-        {this.renderInput("email", "Email")}
-      </div>
-      <div className="email_icon">
-        <i className="far fa-envelope"></i>
-      </div>
-    </div>
-    <div className="signin_password">
-      <div className="password">
-        {this.renderInput("password", "Password", "password")}
-      </div>
-      <div className="password_icon">
-        <i className="fas fa-eye-slash" ></i>
-      </div>
-    </div>
-    <div className="signin_button">
-      {this.renderButton("Signin")}
-    </div>
-  </form>
-</div> */
