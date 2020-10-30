@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import Joi from "joi-browser";
 import { connect } from "react-redux";
 import Form from "../common/form";
@@ -58,6 +58,8 @@ class LoginForm extends Form {
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Login")}
         </form>
+        <br></br>
+        <p>Don't have an account? <NavLink to="/signup">Signup</NavLink></p>
       </div>
     );
   }

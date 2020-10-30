@@ -22,16 +22,16 @@ const ChatRoom = (props) => {
 
   useEffect(() => {
     scrollToBottom()
-  })
+  }, [scrollToBottom])
 
   const handleChange = (e) => {
     setContent(e.target.value)
     setMatchId(props.match.params.id)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(createMessage({ content: content, match_id: match_id }))
+    await dispatch(createMessage({ content: content, match_id: match_id }))
     setContent("")
   }
 

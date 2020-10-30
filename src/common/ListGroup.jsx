@@ -18,7 +18,7 @@ const ListGroup = ({ genders, OnGenderSelect, selectedGender }) => {
 
   return (
     <>
-    { !toggleHide && <ul className="list-group col-3" ref={hideRef} style={{ marginLeft: "120px", overflowWrap: "break-word" }} >
+    { !toggleHide && <ul className="list-group col-5" ref={hideRef} style={{ marginLeft: "130px" }} >
       <h2 style={{ color: "blue" }}>
         <strong>Let's Chat!!!</strong>
       </h2>
@@ -38,7 +38,7 @@ const ListGroup = ({ genders, OnGenderSelect, selectedGender }) => {
         </li>
       ))}
     </ul>}
-        <button ref={showRef} style={{marginLeft: "140px", marginTop:"10px"}} className="btn btn-primary List" onClick={hide}>Hide</button>
+        <button ref={showRef} style={{marginLeft: "160px", marginTop:"10px"}} className="btn btn-primary List" onClick={hide}>Hide</button>
     </>
   );
 };
