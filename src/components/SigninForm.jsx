@@ -59,7 +59,7 @@ class LoginForm extends Form {
           {this.renderButton("Login")}
         </form>
         <br></br>
-        <p>Don't have an account? <NavLink to="/signup">Signup</NavLink></p>
+        <NavLink to="/signup">Don't have an account? Signup</NavLink>
       </div>
     );
   }
