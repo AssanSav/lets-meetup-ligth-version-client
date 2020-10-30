@@ -40,14 +40,14 @@ class UploadPhoto extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
     formData.append("file", this.state.file);
     formData.append("user_id", this.state.userId);
     formData.append("camera", this.state.cameraPhoto);
 
-    this.props.uploadPhoto(formData).then(() => {
+    await this.props.uploadPhoto(formData).then(() => {
       this.props.history.push(
         `/my-profile/${this.props.match.params.id}`
       );

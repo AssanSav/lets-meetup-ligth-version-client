@@ -22,6 +22,7 @@ class UsersList extends Component {
     this.setState({
       genders: ["All Genders",  "Transgender", "Female","Male"],
     });
+    this.props.fetchUsers()
   }
 
   handlePageChange = (page) => {

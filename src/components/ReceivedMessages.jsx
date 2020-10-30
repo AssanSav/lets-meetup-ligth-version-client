@@ -10,8 +10,8 @@ const ReceivedMessages = () => {
 
  
 
-  useEffect(() => {
-    dispatch(fetchReceivedMessages())
+  useEffect( async () => {
+    await dispatch(fetchReceivedMessages())
   }, [dispatch])
 
   return (

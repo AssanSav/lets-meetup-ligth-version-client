@@ -8,8 +8,8 @@ const SentMessages = () => {
   const dispatch = useDispatch()
   const sentMessages = useSelector(state => state.messages.sent)
 
-  useEffect(() => {
-    dispatch(fetchSentMessages())
+  useEffect( async () => {
+    await dispatch(fetchSentMessages())
   }, [dispatch])
 
   return (

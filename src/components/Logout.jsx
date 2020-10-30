@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../store/usersReducer';
 
 
-const Logout = () => {
+const Logout = ({history}) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.users.user)
 
-  useEffect(() => {
-    dispatch(logoutUser(user.id))
-    window.location = "/signin"
-  }, [dispatch, user.id])
+  useEffect(async () => {
+    await dispatch(logoutUser(user.id))
+    history.push("/signin")
+  })
 
   return ( null );
 }

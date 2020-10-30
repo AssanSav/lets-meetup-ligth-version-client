@@ -15,11 +15,11 @@ function App() {
     dispatch(sessionStatus())
     dispatch(fetchMessages())
     dispatch(fetchUsers())
-  })
+  }, [fetchUsers])
 
   return (
     <>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <NavBar />
       <main className="container">
         <Routes />
