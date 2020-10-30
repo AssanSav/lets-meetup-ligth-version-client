@@ -12,9 +12,9 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-      dispatch(sessionStatus())
-      dispatch(fetchMessages())
-      dispatch(fetchUsers())
+    dispatch(sessionStatus())
+    dispatch(fetchMessages())
+    dispatch(fetchUsers())
   })
 
   return (

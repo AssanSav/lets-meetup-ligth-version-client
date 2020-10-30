@@ -19,8 +19,8 @@ const Routes = () => {
   return (
     <>
       <Switch>
-        <Route  path="/signin" render={props => <Login {...props} />} />
-        <Route  path="/signup" render={props => <Signup {...props} />} />
+        <Route path="/signin" render={props => <Login {...props} />} />
+        <Route path="/signup" render={props => <Signup {...props} />} />
         <Route path="/logout" component={Logout}/>
         <ProtectedRoute  path="/matches" render={props => <Matches history={props} />} />
         <ProtectedRoute  path="/users" render={props => <UsersList {...props} />} />
