@@ -10,7 +10,8 @@ import { createMessage } from '../store/messagesReducer';
 class ChatRoom extends Component {
   state = {
     content: "",
-    match_id: ""
+    match_id: "",
+    scroll: false
   }
 
   messagesEnd = createRef()
@@ -20,8 +21,13 @@ class ChatRoom extends Component {
     return this.messagesEnd.scrollIntoView({ behavior: "smooth", block: "end" });
   }
 
-  componentDidUpdate() {
-    this.scrollToBottom()
+  componentDidUpdate(e) {
+    if(this.state.scroll){
+      this.scrollToBottom()
+      this.setState({
+        scroll: false
+      })
+    }
   }
 
   handleChange = (e) => {
@@ -37,7 +43,8 @@ class ChatRoom extends Component {
     e.preventDefault();
     await this.props.createMessage(this.state)
     this.setState({
-      content: ""
+      content: "",
+      scroll: true
     })
   }
 
