@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChatRoomForm = ({ handleSubmit, handleChange, content}) => {
+const ChatRoomForm = ({ handleSubmit, handleChange, content, scrollToBottom}) => {
   return (
       <form className="input" onSubmit={handleSubmit}>
         <textarea
@@ -9,7 +9,7 @@ const ChatRoomForm = ({ handleSubmit, handleChange, content}) => {
           type="text"
           onChange={handleChange}
         ></textarea>
-        <input type="submit" disabled={!content} value="Send" />
+      <input type="submit" disabled={!content} onClick={e => scrollToBottom(e)} value="Send" />
       </form>
   );
 };
