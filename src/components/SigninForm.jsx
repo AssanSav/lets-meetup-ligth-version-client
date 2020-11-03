@@ -11,7 +11,15 @@ class LoginForm extends Form {
     errors: {}
   };
 
-
+  guestUser = () => {
+    const { email, password } = this.state.data
+    this.setState({
+      data: {
+        email: "test_user@xemple.com",
+        password: "111"
+      }
+    })
+  }
 
   schema = {
     email: Joi.string()
@@ -37,7 +45,7 @@ class LoginForm extends Form {
       } else {
         this.props.history.push("/users")
       }
-      
+
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
@@ -56,10 +64,13 @@ class LoginForm extends Form {
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("email", "Email")}
           {this.renderInput("password", "Password", "password")}
-          {this.renderButton("Login")}
+          {this.renderButton("Login")} || 
+          <button onClick={this.guestUser} id="" className="button">
+            Guest User
+        </button>
         </form>
         <br></br>
-        <NavLink to="/signup">Don't have an account? <strong style={{color: "red"}}>Signup</strong></NavLink>
+        <NavLink to="/signup">Don't have an account? <strong style={{ color: "red" }}>Signup</strong></NavLink>
       </div>
     );
   }
