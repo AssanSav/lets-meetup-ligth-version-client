@@ -15,7 +15,7 @@ class LoginForm extends Form {
     const { email, password } = this.state.data
     this.setState({
       data: {
-        email: "test_user@xemple.com",
+        email: "test_user@exemple.com",
         password: "111"
       }
     })
