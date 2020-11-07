@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 import Joi from "joi-browser";
 import Form from "../common/form";
 import { signupUser } from "../store/usersReducer";
@@ -24,7 +24,7 @@ class SignupForm extends Form {
   }
 
   schema = {
-    username: Joi.string().required().label("Usename"),
+    username: Joi.string().required().label("Username"),
     email: Joi.string().required().email().label("Email"),
     gender: Joi.string().required().label("Gender"),
     orientation: Joi.string().required().label("Orientation"),
@@ -36,13 +36,12 @@ class SignupForm extends Form {
     password_confirmation: Joi.string().required().label("Confirm password")
   };
 
-
   doSubmit = async () => {
     try {
       const { data } = this.state;
       await this.props.signupUser(data);
       if (this.props.user.status === 500) {
-        const { emailError, usernameError, passwordError,  passwordConfirmationError, genderError, interestError, orientationError} = this.props.user
+        const { emailError, usernameError, passwordError, passwordConfirmationError, genderError, interestError, orientationError } = this.props.user
         const errors = { ...this.state.errors };
         errors.email = emailError[0]
         errors.password = passwordError[0]
@@ -56,7 +55,7 @@ class SignupForm extends Form {
       } else {
         window.location = "/users"
       }
-     
+
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
@@ -68,7 +67,7 @@ class SignupForm extends Form {
 
   render() {
     if (this.props.status) return <Redirect to="/users" />;
-    
+
     return (
       <div className="form">
         <h1>Signup</h1>
@@ -89,8 +88,7 @@ class SignupForm extends Form {
   }
 }
 
-
-const mapStateToProps = ({ users}) => {
+const mapStateToProps = ({ users }) => {
   return {
     user: users.user,
     status: users.status,

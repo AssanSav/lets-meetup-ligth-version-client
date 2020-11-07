@@ -32,17 +32,17 @@ const slice = createSlice({
       messages.sent = messages.sent.filter(m => m.id !== action.payload.message.id)
     },
 
-    delededReceivedMessage: (messages, action) => {
+    deletedReceivedMessage: (messages, action) => {
       messages.received = messages.received.filter(m => m.id !== action.payload.message.id)
     }
   }
 })
 
-const { fetchedMessages, createDMessage, fetchedSentMessages, fetchedReceivedMessages, delededReceivedMessage, deletedSentMessage } = slice.actions
+const { fetchedMessages, createDMessage, fetchedSentMessages, fetchedReceivedMessages, deletedReceivedMessage, deletedSentMessage } = slice.actions
 export default slice.reducer
 
 
-export const fetchMessages = ()  =>  {
+export const fetchMessages = () => {
   return apiCallBegan({
     url: "/messages",
     onSuccess: fetchedMessages.type
@@ -77,5 +77,5 @@ export const deleteReceivedMessage = (message) => apiCallBegan({
   url: `/messages/${message.id}/update_received_message`,
   method: "put",
   data: message,
-  onSuccess: delededReceivedMessage.type
+  onSuccess: deletedReceivedMessage.type
 })

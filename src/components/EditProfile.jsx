@@ -54,7 +54,6 @@ class EditProfile extends Form {
   };
 
   render() {
-
     return (
       <div className="form">
         <h1>Edit Profile</h1>
@@ -72,8 +71,8 @@ class EditProfile extends Form {
           {this.renderSelect("body_shape", "Body shape", ["Athletic", "Curvy", "Skinny"])}
           {this.renderInput("city", "City")}
           {this.renderCheckbox("interest_ids", "Interests", this.props.interests)}
-          {this.renderTextearea("bio", "Bio")}
-          Visibiliy
+          {this.renderTextarea("bio", "Bio")}
+          Visibility
           {this.renderSelect("visibility", "Want to go public?", ["true", "false"])}
           <button className="btn btn-primary" ref={this.buttonRef}>Edit</button>
         </form>

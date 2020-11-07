@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
 
 
-export const messagesTable = (data, deleteMessage, label ) => {
+export const messagesTable = (data, deleteMessage, label) => {
 
-  return ( 
+  return (
     <table>
       <tbody>
         <tr>
@@ -44,6 +43,5 @@ export const messagesTable = (data, deleteMessage, label ) => {
         ))}
       </tbody>
     </table>
-   );
+  );
 }
- 

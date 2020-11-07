@@ -12,10 +12,9 @@ class LoginForm extends Form {
   };
 
   guestUser = () => {
-    const { email, password } = this.state.data
     this.setState({
       data: {
-        email: "test_user@exemple.com",
+        email: "test_user@xemple.com",
         password: "111"
       }
     })
@@ -64,7 +63,7 @@ class LoginForm extends Form {
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("email", "Email")}
           {this.renderInput("password", "Password", "password")}
-          {this.renderButton("Login")} || 
+          {this.renderButton("Login")} ||
           <button onClick={this.guestUser} id="" className="button">
             Guest User
         </button>

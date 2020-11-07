@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Joi from "joi-browser";
 import Input from "./input";
 import Select from "./select";
-import Textarea from './textearea';
+import Textarea from './textarea';
 import Checkbox from './checkbox';
 
 class Form extends Component {
@@ -55,8 +55,8 @@ class Form extends Component {
     this.setState({ data, errors });
   };
 
-  handleCkecked = (e) => {
-    let data = this.state.data 
+  handleChecked = (e) => {
+    let data = this.state.data
     let interestsChecked = data[e.target.name]
     let interestValue = e.target.value;
     if (e.target.checked === true && interestsChecked) {
@@ -105,7 +105,7 @@ class Form extends Component {
         name={name}
         value={data[name]}
         label={label}
-        onChange={this.handleCkecked}
+        onChange={this.handleChecked}
         error={errors[name]}
       />
     )
@@ -125,7 +125,7 @@ class Form extends Component {
     );
   }
 
-  renderTextearea(name, label) {
+  renderTextarea(name, label) {
     const { data, errors } = this.state;
     return (
       <Textarea

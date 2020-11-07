@@ -7,7 +7,7 @@ const api = ({ dispatch }) => next => async action => {
 
   if (action.type !== actions.apiCallBegan.type) return next(action)
 
-  const { url, method, data, onStart, onSuccess,  onError } = action.payload
+  const { url, method, data, onStart, onSuccess, onError } = action.payload
 
   if (onStart)
     dispatch({ type: onStart })
@@ -25,12 +25,12 @@ const api = ({ dispatch }) => next => async action => {
     // General
     dispatch(actions.apiCallSuccess(response.data))
     // Specific
-    if (onSuccess && response.data.status !== 409 && response.data.status !== 500){
+    if (onSuccess && response.data.status !== 409 && response.data.status !== 500) {
       dispatch({ type: onSuccess, payload: response.data })
-    } else{
-      dispatch({ type: onSuccess, payload: { user: {data: {attributes: response.data}}}  })
+    } else {
+      dispatch({ type: onSuccess, payload: { user: { data: { attributes: response.data } } } })
     }
-      
+
   } catch (error) {
     // General
     dispatch(actions.apiCallFailed(error.message))

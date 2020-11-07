@@ -71,7 +71,6 @@ const slice = createSlice({
 const { session, signin, signup, deletedUser, logout, upLoadedPhoto, editedProfile, fetchedUsers, fetchedProfile, fetchedMatches } = slice.actions
 export default slice.reducer
 
-
 export const sessionStatus = () => apiCallBegan({
   url: "/session/status",
   onSuccess: session.type,
@@ -96,13 +95,13 @@ export const signinUser = (formData) => {
 }
 
 export const editProfile = (user) => {
-  const {age, bio, body_shape, children, city, educattion, email, ethnicity, gender, height, id, interests, orientation, relationship, username, visibility} = user
+  const { age, bio, body_shape, children, city, educattion, email, ethnicity, gender, height, id, interests, orientation, relationship, username, visibility } = user
   const interest_ids = interests.filter(i => i.id)
   // debugger
   return apiCallBegan({
     url: `users/${user.id}`,
     method: "patch",
-    data: { user: { age, bio, interest_ids, body_shape, children, city, educattion, email, ethnicity, gender, height, id, orientation, relationship, username, visibility}},
+    data: { user: { age, bio, interest_ids, body_shape, children, city, educattion, email, ethnicity, gender, height, id, orientation, relationship, username, visibility } },
     onSuccess: editedProfile.type
   })
 }

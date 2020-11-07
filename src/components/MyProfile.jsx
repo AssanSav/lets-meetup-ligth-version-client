@@ -1,9 +1,9 @@
 import React from "react";
-import {  useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteUser } from "../store/usersReducer";
 
-const MyProfile = ({history}) => {
+const MyProfile = ({ history }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.users.user)
   const interests = useSelector(state => state.users.interests)
@@ -27,7 +27,7 @@ const MyProfile = ({history}) => {
 
   const removeUser = async () => {
     await dispatch(deleteUser(user))
-      history.push("/signup");
+    history.push("/signup");
   };
 
   const anchorTag = (
@@ -130,5 +130,5 @@ const MyProfile = ({history}) => {
     </div>
   );
 }
- 
+
 export default MyProfile;

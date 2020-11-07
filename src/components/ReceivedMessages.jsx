@@ -8,11 +8,14 @@ const ReceivedMessages = () => {
   const dispatch = useDispatch()
   const ReceivedMessages = useSelector(state => state.messages.received)
 
- 
 
-  useEffect( async () => {
-    await dispatch(fetchReceivedMessages())
-  }, [dispatch])
+
+  useEffect(() => {
+    const dispatchFetchReceivedMessages = async () => {
+      await dispatch(fetchReceivedMessages())
+    }
+    dispatchFetchReceivedMessages()
+  })
 
   return (
     <>

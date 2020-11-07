@@ -82,23 +82,23 @@ class UploadPhoto extends Component {
               </Button>
               </div>
             )}
-          {this.state.inputFile && 
-          <div style={{ textAlign: "center" }}>
-            <img
-              style={{
-                width: "50%",
-                height: "10%",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "10px",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              src={this.state.inputFile}
-              alt={this.state.inputFile}
-            />
-          </div> 
+          {this.state.inputFile &&
+            <div style={{ textAlign: "center" }}>
+              <img
+                style={{
+                  width: "50%",
+                  height: "10%",
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginTop: "10px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                src={this.state.inputFile}
+                alt={this.state.inputFile}
+              />
+            </div>
           }
           <div style={{ textAlign: "center", marginTop: "10px" }}>
             <Button variant="outline-success" type="submit" value="Upload">

@@ -20,7 +20,7 @@ class UsersList extends Component {
 
   componentDidMount() {
     this.setState({
-      genders: ["All Genders",  "Transgender", "Female","Male"],
+      genders: ["All Genders", "Transgender", "Female", "Male"],
     });
     this.props.fetchUsers()
   }
@@ -32,7 +32,8 @@ class UsersList extends Component {
 
     window.scrollTo({
       top: 2,
-      behavior: "smooth"})
+      behavior: "smooth"
+    })
   };
 
   handleOnGenderSelect = (gender) => {
@@ -44,7 +45,6 @@ class UsersList extends Component {
     const { users } = this.props;
 
     if (!users) { return <div></div> };
-
 
     const filteredByGender =
       selectedGender === "Male" || selectedGender === "Female" || selectedGender === "Transgender"

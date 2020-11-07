@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import NavBar from './components/NavBar';
 import Routes from './components/Routes';
 import './App.css';
@@ -15,7 +15,7 @@ function App() {
     dispatch(sessionStatus())
     dispatch(fetchMessages())
     dispatch(fetchUsers())
-  }, [fetchUsers])
+  }, [dispatch])
 
   return (
     <>

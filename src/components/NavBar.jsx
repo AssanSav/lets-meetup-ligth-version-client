@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import {  useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const NavBar = () => { 
+const NavBar = () => {
   const user = useSelector(state => state.users.user)
   const status = useSelector(state => state.users.status)
 

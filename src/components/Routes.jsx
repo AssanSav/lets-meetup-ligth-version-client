@@ -21,16 +21,16 @@ const Routes = () => {
       <Switch>
         <Route path="/signin" render={props => <Login {...props} />} />
         <Route path="/signup" render={props => <Signup {...props} />} />
-        <Route path="/logout" render={props => <Logout {...props} />}/>
-        <ProtectedRoute  path="/matches" render={props => <Matches history={props} />} />
-        <ProtectedRoute  path="/users" render={props => <UsersList {...props} />} />
-        <ProtectedRoute  path="/my-profile/:id" render={props => <MyProfile {...props} />} />
-        <ProtectedRoute  path="/new-message/:id" render={props => <ChatRoom {...props} />} />
-        <ProtectedRoute  path="/upload-photos/:id" render={props => <UploadPhoto {...props} />} />
-        <ProtectedRoute  path="/edit-profile/:id" render={props => <EditProfile {...props} />} />
-        <ProtectedRoute  path="/profile/:id" render={props => <Profile {...props} />} />
-        <ProtectedRoute  path="/received-messages" render={props => <ReceivedMessages {...props} />} />
-        <ProtectedRoute  path="/sent-messages" render={props => <SentMessages {...props} />} />
+        <Route path="/logout" render={props => <Logout {...props} />} />
+        <ProtectedRoute path="/matches" render={props => <Matches history={props} />} />
+        <ProtectedRoute path="/users" render={props => <UsersList {...props} />} />
+        <ProtectedRoute path="/my-profile/:id" render={props => <MyProfile {...props} />} />
+        <ProtectedRoute path="/new-message/:id" render={props => <ChatRoom {...props} />} />
+        <ProtectedRoute path="/upload-photos/:id" render={props => <UploadPhoto {...props} />} />
+        <ProtectedRoute path="/edit-profile/:id" render={props => <EditProfile {...props} />} />
+        <ProtectedRoute path="/profile/:id" render={props => <Profile {...props} />} />
+        <ProtectedRoute path="/received-messages" render={props => <ReceivedMessages {...props} />} />
+        <ProtectedRoute path="/sent-messages" render={props => <SentMessages {...props} />} />
         <Route path="/not-found" component={NotFound} />
         <Redirect from="/" exact to="/signin" />
         <Redirect to="/not-found" />
