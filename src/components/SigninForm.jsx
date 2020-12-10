@@ -14,7 +14,7 @@ class LoginForm extends Form {
   guestUser = () => {
     this.setState({
       data: {
-        email: "test_user@xemple.com",
+        email: "test_user@exemple.com",
         password: "111"
       }
     })
