@@ -43,6 +43,7 @@ class SignupForm extends Form {
       if (this.props.user.status === 500) {
         const { emailError, usernameError, passwordError, passwordConfirmationError, genderError, interestError, orientationError } = this.props.user
         const errors = { ...this.state.errors };
+        
         errors.email = emailError[0]
         errors.password = passwordError[0]
         errors.gender = genderError[0]

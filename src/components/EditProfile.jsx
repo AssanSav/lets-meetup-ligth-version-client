@@ -13,7 +13,7 @@ class EditProfile extends Form {
   buttonRef = React.createRef()
 
   schema = {
-    username: Joi.string().required().label("Usename"),
+    username: Joi.string().required().label("Username"),
     gender: Joi.string().required().label("Gender"),
     orientation: Joi.string().required().label("Orientation"),
     email: Joi.string().required().email().label("Email"),
@@ -60,14 +60,14 @@ class EditProfile extends Form {
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("email", "Email")}
-          {this.renderSelect("gender", "Gender", ["Male", "Female", "Transgerder"])}
+          {this.renderSelect("gender", "Gender", ["Male", "Female", "Transgender"])}
           {this.renderSelect("orientation", "Orientation", ["Straight", "Lesbian", "Gay"])}
           {this.renderSelect("relationship", "Relationship", ["Single", "Married", "In a relationship", "Engaged", "Widowed", "Separated", "Divorced"])}
           {this.renderInput("children", "Kids")}
           {this.renderInput("age", "Age")}
           {this.renderInput("height", "Height")}
           {this.renderSelect("ethnicity", "Ethnicity", ["Hispanic or Latino", "Black/African descent", "White", "Asian/Pacific Islander"])}
-          {this.renderSelect("education", "Education", ["Doctorate", "Masters", "Bachelors", "Some colege", "Hight school", "Did not complete hight school"])}
+          {this.renderSelect("education", "Education", ["Doctorate", "Masters", "Bachelors", "Some college", "Hight school", "Did not complete hight school"])}
           {this.renderSelect("body_shape", "Body shape", ["Athletic", "Curvy", "Skinny"])}
           {this.renderInput("city", "City")}
           {this.renderCheckbox("interest_ids", "Interests", this.props.interests)}
