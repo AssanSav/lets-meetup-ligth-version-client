@@ -6,12 +6,6 @@ import { logoutUser } from "../store/usersReducer";
 const NavBar = () => {
   const user = useSelector((state) => state.users.user);
   const status = useSelector((state) => state.users.status);
-  const dispatch = useDispatch();
-
-  const logout = (user) => {
-    dispatch(logoutUser(user.id));
-    window.location = "/signin";
-  };
 
   const renderContent = () => {
     switch (status) {
@@ -101,13 +95,12 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <div
-                  style={{ cursor: "pointer" }}
+                <NavLink
+                  to="/logout"
                   className="nav-link"
-                  onClick={(e) => logout(e)}
                 >
                   Log Out
-                </div>
+                </NavLink>
               </li>
               <li>
                 <NavLink className="navbar-brand" to={`/my-profile/${user.id}`}>
