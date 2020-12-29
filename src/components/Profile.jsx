@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProfile } from "../store/usersReducer";
 
-const Profile = (props ) => {
-  const dispatch = useDispatch()
-  const status = useSelector(state => state.users.status)
-  const interests = useSelector(state => state.users.interests)
+const Profile = (props) => {
+  const dispatch = useDispatch();
+  const status = useSelector((state) => state.users.status);
+  const interests = useSelector((state) => state.users.interests);
 
   const {
     id,
@@ -23,13 +23,11 @@ const Profile = (props ) => {
     relationship,
     education,
     bio,
-  } = useSelector(state => state.users.profile)
-
+  } = useSelector((state) => state.users.profile);
 
   useEffect(() => {
-    dispatch(fetchProfile(props.match.params.id))
-  }, [dispatch, props.match.params.id])
-
+    dispatch(fetchProfile(props.match.params.id));
+  }, [dispatch, props.match.params.id]);
 
   if (!status) {
     return <div></div>;
@@ -103,8 +101,8 @@ const Profile = (props ) => {
           <button className="btn btn-success">Send Message</button>
         </Link>
       </div>
-    )
+    );
   }
-}
+};
 
 export default Profile;
