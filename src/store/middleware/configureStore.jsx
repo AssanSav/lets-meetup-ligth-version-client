@@ -1,15 +1,13 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit"
-import reducer from '../reducer';
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import reducer from "../reducer";
 import toast from "./toast";
-import api from "./http/api"
+import api from "./http/api";
 
-export default function () {
+const configure = () => {
   return configureStore({
     reducer,
-    middleware: [
-      ...getDefaultMiddleware(),
-      toast,
-      api
-    ]
-  })
+    middleware: [...getDefaultMiddleware(), toast, api],
+  });
 }
+
+export default configure

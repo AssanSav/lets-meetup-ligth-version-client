@@ -13,7 +13,6 @@ import UploadPhoto from './UploadPhoto';
 import ProtectedRoute from '../common/protectedRoute';
 import EditProfile from './EditProfile';
 import NotFound from './NotFond';
-import Logout from './Logout';
 
 const Routes = () => {
   return (
@@ -21,7 +20,6 @@ const Routes = () => {
       <Switch>
         <Route path="/signin" render={props => <Login {...props} />} />
         <Route path="/signup" render={props => <Signup {...props} />} />
-        <Route path="/logout" render={props => <Logout {...props} />} />
         <ProtectedRoute path="/matches" render={props => <Matches history={props} />} />
         <ProtectedRoute path="/users" render={props => <UsersList {...props} />} />
         <ProtectedRoute path="/my-profile/:id" render={props => <MyProfile {...props} />} />

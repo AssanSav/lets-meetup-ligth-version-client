@@ -5,23 +5,21 @@ import { deleteReceivedMessage } from "../store/messagesReducer";
 import { Link } from "react-router-dom";
 
 const ReceivedMessages = () => {
-  const dispatch = useDispatch()
-  const ReceivedMessages = useSelector(state => state.messages.received)
-
-
+  const dispatch = useDispatch();
+  const ReceivedMessages = useSelector((state) => state.messages.received);
 
   useEffect(() => {
     const dispatchFetchReceivedMessages = async () => {
-      await dispatch(fetchReceivedMessages())
-    }
-    dispatchFetchReceivedMessages()
-  })
+      await dispatch(fetchReceivedMessages());
+    };
+    dispatchFetchReceivedMessages();
+  }, [dispatch]);
 
   return (
     <>
       <h4 style={{ textAlign: "center", marginTop: "40px", color: "blue" }}>
         INBOX
-          </h4>
+      </h4>
       <table>
         <tbody>
           <tr>
@@ -54,7 +52,7 @@ const ReceivedMessages = () => {
                   onClick={() => dispatch(deleteReceivedMessage(message))}
                 >
                   X
-                    </button>
+                </button>
               </td>
             </tr>
           ))}
@@ -62,6 +60,6 @@ const ReceivedMessages = () => {
       </table>
     </>
   );
-}
+};
 
-export default ReceivedMessages
+export default ReceivedMessages;

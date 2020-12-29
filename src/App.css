@@ -1,27 +1,26 @@
-
 body {
   background-color: rgba(255, 0, 0, 0.253);
 }
 
-#root > main > div > form > div:nth-child(1) > div > div{
+#root > main > div > form > div:nth-child(1) > div > div {
   background-color: red;
 }
 
 .list-group-item {
-    overflow: hidden; 
-    width: 100%;
-    white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .form {
   text-align: center;
-  max-width:500px;
-  margin:25px auto;
-  background:#fff;
-  border-radius:10px;
+  max-width: 500px;
+  margin: 25px auto;
+  background: #fff;
+  border-radius: 10px;
   border: 2px solid;
-  padding:20px;
-  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
 }
 
 .form input::placeholder {
@@ -31,12 +30,11 @@ body {
 .form-group {
   display: block;
   padding: 9px;
-  border:2px solid black;
+  border: 2px solid black;
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 3px;
 }
-
 
 .interests {
   display: block;
@@ -50,7 +48,7 @@ body {
   padding: 3px;
 }
 
-#root > main > div > form > button{
+#root > main > div > form > button {
   background-color: rgb(0, 207, 0);
   width: 100%;
   height: 45px;
@@ -68,7 +66,7 @@ body {
   margin-left: 80px;
   background-color: whitesmoke;
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   justify-items: center;
   text-align: center;
   border-radius: 10px;
@@ -86,13 +84,13 @@ body {
 }
 
 .image_align {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   vertical-align: bottom;
-}  
+}
 
 /* Show page  */
-.user-profile{
+.user-profile {
   display: inline-block;
   width: 100%;
   margin: 100px auto 120px;
@@ -100,7 +98,7 @@ body {
   padding: 0 20px 20px;
   border-radius: 6px;
   text-align: center;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 .avatar_flip {
@@ -119,12 +117,12 @@ body {
 
 .profile_pic {
   text-align: center;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   /* height: 250px; */
   width: 400px;
 }
 
-#root > main  > div > p {
+#root > main > div > p {
   text-indent: 50px;
   text-align: justify;
   letter-spacing: 3px;
@@ -140,7 +138,7 @@ body {
   background-color: #d5d2df;
 }
 
- /* Table */
+/* Table */
 table {
   table-layout: fixed;
   background-color: white;
@@ -156,7 +154,8 @@ td {
   white-space: nowrap;
 }
 
-td, th {
+td,
+th {
   border: 0.01px solid;
   text-align: left;
   padding: 5px;
@@ -173,17 +172,17 @@ tr:nth-child(even) {
   margin-bottom: 40px;
   height: 100%;
   border: 1px solid;
-  background-color: rgba(0,0,0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   overflow: hidden;
   overflow-wrap: break-word;
-  box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .chatroom h3 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   background-color: black;
-  color: #FFF;
+  color: #fff;
   margin: 0;
   height: 40px;
   font-size: 20px;
@@ -213,7 +212,7 @@ tr:nth-child(even) {
   margin: 10px 0;
   width: 200px;
   font-size: 15px;
-  text-overflow: "----"; 
+  text-overflow: "----";
 }
 
 .chatroom .chats .chat img {
@@ -225,7 +224,7 @@ tr:nth-child(even) {
   left: 0px;
 }
 
-.chatroom .chats .chat.left{
+.chatroom .chats .chat.left {
   background-color: greenyellow;
 }
 
@@ -236,7 +235,7 @@ tr:nth-child(even) {
 
 .chatroom .chats .chat a {
   text-decoration: none;
-  color:#3498DB;
+  color: #3498db;
 }
 
 .chatroom .input {
@@ -249,19 +248,19 @@ tr:nth-child(even) {
 
 .chatroom .input textarea[type="text"] {
   outline: 0;
-  border: 2px solid #1EE494;
+  border: 2px solid #1ee494;
   padding: 0 5px;
   border-radius: 5px;
   margin-left: 10px;
   height: 100px;
   width: 70%;
-  box-sizing: border-box; 
-  margin-bottom: 70px; 
+  box-sizing: border-box;
+  margin-bottom: 70px;
 }
 
 .chatroom .input [type="submit"] {
   background: transparent;
-  border: 1px solid #1EE494;
+  border: 1px solid #1ee494;
   height: 30px;
   width: 70px;
   font-size: 14px;
@@ -273,8 +272,8 @@ tr:nth-child(even) {
 }
 
 /* Upload file */
- input[type="file"] {
-    display: none;
+input[type="file"] {
+  display: none;
 }
 
 .custom-file-upload {
@@ -285,19 +284,17 @@ tr:nth-child(even) {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  color:blue;
+  color: blue;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
   cursor: pointer;
   line-height: normal;
-  padding: 8px 10px; 
+  padding: 8px 10px;
 }
 
 .custom-file-upload:hover {
   background-color: red;
 }
- 
-

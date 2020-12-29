@@ -42,7 +42,7 @@ class LoginForm extends Form {
 
         this.setState({ errors })
       } else {
-        this.props.history.push("/users")
+        window.location = "/users"
       }
 
     } catch (ex) {
