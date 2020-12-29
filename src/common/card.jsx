@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export const card = (user) => {
 
   return (
-    <div className="image-align">
+    <div  className="image-align">
       <Link to={`/profile/${user.id}`}>
         <img src={user.image} alt="" id="avatar_img" />
       </Link>
       <p>
         <strong>
-          <Link to={`/match-profile/${user.id}`}>
+          <Link to={`/profile/${user.id}`}>
             {user.username}
           </Link>
         </strong>
