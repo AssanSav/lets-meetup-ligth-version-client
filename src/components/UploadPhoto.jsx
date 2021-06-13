@@ -58,7 +58,7 @@ class UploadPhoto extends Component {
         <form onSubmit={this.handleSubmit}>
           <div style={{ textAlign: "center", marginTop: "20px" }}>
             <label htmlFor="file-upload" className="custom-file-upload">
-              Upload
+              Pick from Device
             </label>
             <input id="file-upload" onChange={this.handleChange} type="file" />
           </div>
