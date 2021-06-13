@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { logoutUser } from "../store/usersReducer";
+import { useSelector } from "react-redux";
 
 const NavBar = () => {
   const user = useSelector((state) => state.users.user);
@@ -95,10 +94,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  to="/logout"
-                  className="nav-link"
-                >
+                <NavLink to="/logout" className="nav-link">
                   Log Out
                 </NavLink>
               </li>
