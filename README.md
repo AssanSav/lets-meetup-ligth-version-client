@@ -1,3 +1,5 @@
+This App is created based on the dating site algorithms, allowing users to sign up, set up their profiles and be matched accordantly so they can chat. The App also allow users to just reach out to anyone who choses to be seen publicly. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

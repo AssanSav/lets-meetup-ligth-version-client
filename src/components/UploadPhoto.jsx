@@ -14,14 +14,14 @@ class UploadPhoto extends Component {
       userId: "",
       isCameraVisible: false,
       inputFile: "",
-    }
+    };
   }
 
   showCamera = (e) => {
     this.setState((prevState) => ({
       isCameraVisible: !prevState.isCameraVisible,
     }));
-  }
+  };
 
   handleChange = (e) => {
     if (e.target.files[0]) {
@@ -31,7 +31,7 @@ class UploadPhoto extends Component {
         inputFile: URL.createObjectURL(e.target.files[0]),
       });
     }
-  }
+  };
 
   handlePhoto = (data) => {
     this.setState({
@@ -48,11 +48,9 @@ class UploadPhoto extends Component {
     formData.append("camera", this.state.cameraPhoto);
 
     await this.props.uploadPhoto(formData).then(() => {
-      this.props.history.push(
-        `/my-profile/${this.props.match.params.id}`
-      );
+      this.props.history.push(`/my-profile/${this.props.match.params.id}`);
     });
-  }
+  };
 
   render() {
     return (
@@ -60,7 +58,7 @@ class UploadPhoto extends Component {
         <form onSubmit={this.handleSubmit}>
           <div style={{ textAlign: "center", marginTop: "20px" }}>
             <label htmlFor="file-upload" className="custom-file-upload">
-              Pick from our Computer
+              Upload
             </label>
             <input id="file-upload" onChange={this.handleChange} type="file" />
           </div>
@@ -76,13 +74,13 @@ class UploadPhoto extends Component {
               </Button>
             </div>
           ) : (
-              <div style={{ textAlign: "center" }}>
-                <Button variant="outline-secondary" onClick={this.showCamera}>
-                  Hide Camera
+            <div style={{ textAlign: "center" }}>
+              <Button variant="outline-secondary" onClick={this.showCamera}>
+                Hide Camera
               </Button>
-              </div>
-            )}
-          {this.state.inputFile &&
+            </div>
+          )}
+          {this.state.inputFile && (
             <div style={{ textAlign: "center" }}>
               <img
                 style={{
@@ -99,7 +97,7 @@ class UploadPhoto extends Component {
                 alt={this.state.inputFile}
               />
             </div>
-          }
+          )}
           <div style={{ textAlign: "center", marginTop: "10px" }}>
             <Button variant="outline-success" type="submit" value="Upload">
               Upload
